@@ -1,0 +1,248 @@
+/* josefin-sans-300 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("../fonts/josefin-sans-v25-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v25-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* josefin-sans-regular - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/josefin-sans-v25-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v25-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* josefin-sans-600 - latin */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""),
+    url("../fonts/josefin-sans-v25-latin-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/josefin-sans-v25-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --pink-gradient: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  --primary-pink-color: #ce9898;
+  --secondary-pink-color: #ee8b8b;
+  --white-color: #ffffff;
+  --secondary-dark-color: #423a3a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  background-image: url(../images/Bitmap.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--primary-pink-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 7.5rem 0;
+}
+.logo-link {
+  display: inline-block;
+  width: 15.8rem;
+}
+
+.main {
+  flex-grow: 1;
+  padding-bottom: 15.2rem;
+}
+
+.main__container {
+}
+
+.main__wrapper {
+  width: 44.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 6.4rem;
+  line-height: 1.11;
+  letter-spacing: 17.32px;
+  font-weight: 600;
+  color: var(--secondary-dark-color);
+  margin-bottom: 3.2rem;
+}
+
+.title span {
+  line-height: 1;
+  color: var(--primary-pink-color);
+  font-weight: 300;
+}
+
+.description {
+  margin-bottom: 4rem;
+}
+
+form {
+  margin: 0 auto;
+  position: relative;
+  width: 44.5rem;
+}
+
+form input {
+  width: 44.5rem;
+  padding: 1.5rem 3.2rem 1.3rem;
+  border: 1px solid var(--primary-pink-color);
+  border-radius: 28px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: var(--primary-pink-color);
+  opacity: 0.5;
+  outline: 1px solid var(--primary-pink-color);
+  background-color: transparent;
+}
+
+form input::placeholder {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: var(--primary-pink-color);
+}
+
+button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 1.9rem 4.6rem;
+  background: var(--pink-gradient);
+  border: none;
+  border-radius: 28px;
+  box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    background: none;
+  }
+  .header {
+    padding: 3.2rem 0;
+  }
+  .hero {
+    width: 100%;
+    height: 90vh;
+    background-image: url(../images/Bitmap-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .information {
+    padding-top: 6.4rem;
+  }
+
+  .main__wrapper {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 1.4rem;
+    line-height: 1.57;
+  }
+
+  .main {
+    padding-bottom: 9.2rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 1.05;
+    letter-spacing: 10.82px;
+    margin-bottom: 1.6rem;
+  }
+
+  .description {
+    margin-bottom: 3.2rem;
+  }
+
+  form {
+    width: 100%;
+    max-width: 311px;
+  }
+
+  form input {
+    padding: 1.1rem 2.4rem 0.9rem;
+    font-size: 1.4rem;
+    line-height: 2;
+    width: 100%;
+  }
+
+  button {
+    padding: 1.5rem 2.8rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero {
+    width: 100%;
+    height: 250px;
+  }
+}
